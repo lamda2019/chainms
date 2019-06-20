@@ -15,10 +15,14 @@ public class MainTest {
 		DepartmentLeader.SetSuccessor(President);
 		VicePresident.SetSuccessor(DepartmentLeader);
 		President.SetSuccessor(GroupLeader);
-		
+
+		//第一条链
 		VicePresident.ProcessRequest(mClient.sendRequst(1, 100, 40));
+		//第二条链
 		VicePresident.ProcessRequest(mClient.sendRequst(2, 200, 40));
+		//第三条链
 		VicePresident.ProcessRequest(mClient.sendRequst(3, 300, 40));
+		//第四条链
 		VicePresident.ProcessRequest(mClient.sendRequst(4, 400, 140));
 		
 	}
